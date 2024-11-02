@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Login</title>
-    
-</head>
+    //print_r($_REQUEST); mostra o usuario e senha que tentei acessar
 
-<body>
-    <?php
-        require('views/login.view.php');
-    ?>
-</body>
-
-</html>
+    if(isset($_POST['submit'])&& !empty($_POST['username']) && !empty($_POST['password'])){
+        //acessa o sistema
+    }else{
+        //não acessa
+        header('Location: views/login.view.php');
+    }
